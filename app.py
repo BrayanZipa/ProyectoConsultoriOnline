@@ -37,6 +37,12 @@ def pacientesignup():
 def funcionariosignup():
     return render_template("signUpFuncionario.html")
 
+#Ruta de salida de la aplicación de los usuarios
+@app.route('/usuariologout')
+def usuariologout():
+    return redirect(url_for("index"))
+
+
 
 @app.route('/ingresousuariopaciente', methods=['POST'])
 def ingresousuariopaciente():  
