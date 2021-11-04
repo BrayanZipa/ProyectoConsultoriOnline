@@ -1,0 +1,27 @@
+{% extends 'global2.html' %}
+
+    {% block body %}
+
+    <h3>Valoración médica</h3>
+    <div id="contenedor"> 
+        <form class="formulario" action="/guardar_valoracioncitamedica/{{medicalAppointment.id}}/{{functionary.id}}" method="POST">
+
+            <div class="form-group">
+                <label>Tipo de registro</label>
+                <select class="form-control" name="registerType">
+                    <option value="Asistio">Asistio</option>
+                    <option value="No Asistio">No Asistio</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control" name="observation" cols="30" rows="10" placeholder="Observación" requerid=""></textarea>
+            </div>
+
+            <div id="boton" class="form-group">
+            <input class="btn btn-dark btn-update4" type="submit" value="Registrar valoración">
+            </div>
+        </form>
+    </div>
+
+    {% endblock %}

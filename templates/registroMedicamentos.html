@@ -1,0 +1,32 @@
+{% extends 'global2.html' %}
+
+  	{% block body %}
+
+	<h3>Registro de medicamentos</h3>
+	<div id="contenedor">
+		<form class="formulario" action="/crear_registromedicamentos/{{functionary.id}}" method="POST">
+
+			<div class="form-group">
+				<input class="form-control" type="text" name="uniqueCode" placeholder="Código único" requerid="">
+			</div>
+
+			<div class="form-group">
+				<input class="form-control" type="text" name="name" placeholder="Nombre medicamento" requerid="">
+			</div>
+
+			<div class="form-group">
+				<input class="form-control" type="text" name="supplier" placeholder="Proveedor" requerid="">
+			</div>
+
+			<div class="form-group">
+				<input class="form-control" type="text" name="price" placeholder="Precio unitario" requerid=""
+					pattern="[0-9]+">
+			</div>
+
+			<div id="boton" class="form-group">
+				<input class="btn btn-dark btn-update5" type="submit" value="Registrar medicamento">
+			</div>
+		</form>
+	</div>
+
+	{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'global2.html' %}
+
+    {% block body %}
+
+    <h3>Inventario de medicinas</h3>
+    <div id="contenedor">
+        <form class="formulario" action="/crear_registrocontrolmedicinas/{{functionary.id}}" method="POST">
+
+            <div class="form-group">
+                <label>Tipo de registro</label>
+                <select class="form-control" name="registerType">
+                    <option value="1">Entrada</option>
+                    <option value="2">Salida</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" type="text" name="codigoMedicina" placeholder="Código medicina" requerid="">
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" type="text" name="quantity" placeholder="Cantidad" requerid="" pattern="[0-9]+">
+            </div>
+
+            <div id="boton" class="form-group">
+                <input class="btn btn-dark btn-update6" type="submit" value="Registrar movimiento">
+            </div>
+        </form>
+    </div>
+
+    {% endblock %}
